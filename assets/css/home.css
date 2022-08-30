@@ -1,0 +1,59 @@
+/* =============== PRESENTATION SETTINGS =============== */
+.presentation-container{
+    background: url(../img/background-image.png) no-repeat 62%;
+    background-size: cover;
+    
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.presentation-container_welcome h1{
+    margin-block: 1.8rem;
+}
+
+.presentation-welcome_description{
+    color: #fff;
+    font-weight: 400;
+
+    width: min(60rem, 80%);
+    margin-bottom: 1.8rem;
+}
+
+.presentation-welcome-btns{
+    display: flex;
+    gap: 2rem;
+}
+
+.presentation-welcome-btns .btn{
+    padding: 1.2rem 2.8rem;
+}
+
+@media (max-width: 768px) {
+    .presentation-container_welcome h1{
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 375px) {    
+    .presentation-container_welcome{
+        text-align: center;
+    }
+    
+    .presentation-welcome_description{
+        width: auto;
+    }
+
+    .presentation-welcome-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .presentation-container_welcome{
+        margin-block: calc(var(--height-nav) + 4rem);
+    }
+} 
