@@ -1,4 +1,8 @@
 /* =============== PRESENTATION SETTINGS =============== */
+.presentation.content{
+    padding-block: 0;
+}
+
 .presentation-container{
     background: url(../img/background-image.png) no-repeat 62%;
     background-size: cover;
@@ -30,9 +34,89 @@
     padding: 1.2rem 2.8rem;
 }
 
+/* =============== OPTIONS HELP SETTINGS =============== */
+.optionshelp-container h3{
+    font-size: 2.6rem;
+    color: var(--paragraph-color);
+    margin-bottom: 5rem;
+}
+
+.optionshelp-container_group{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+}
+
+.optionshelp-group_card {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 35rem;
+
+    max-width: 45rem;
+    border-radius: 1rem;
+    background: url(../img/option-help1.png) right bottom no-repeat;
+    background-size: contain;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.optionshelp-group_card:nth-child(2) {
+    background-image: url(../img/option-help2.png);
+}
+
+.optionshelp-group_card:nth-child(3) {
+    background-image: url(../img/option-help3.png);
+}
+
+.optionshelp-card_information{
+    padding: 3.5rem 0 3.5rem 2.5rem;
+}
+
+.optionshelp-card_information > .btn{
+    background-color: var(--primary-color);
+    padding: .2rem .8rem;
+    
+    border-color: transparent;
+    border-radius: 1rem;
+
+    font-size: 1.2rem;
+}
+
+.optionshelp-card_information > .btn:hover{
+    filter: brightness(1.1);
+}
+
+.optionshelp-card_information > h4{
+    font-size: 1.6rem;
+    color: var(--paragraph-color);
+    
+    width: 12.5rem;
+    margin-block: 2rem 1.2rem;
+}
+
+.optionshelp-card_information > p:not(.btn){
+    font-size: 1.2rem;
+    width: 60%;
+}
+
+.optionshelp-group_card > img{
+    width: 100%;
+}
+
+/* =============== RESPONSIVE SETTINGS =============== */
 @media (max-width: 768px) {
     .presentation-container_welcome h1{
         font-size: 3.2rem;
+    }
+    
+    .optionshelp-container_group{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .optionshelp-container h3{
+        font-size: 2rem;
     }
 }
 
