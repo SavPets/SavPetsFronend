@@ -1,4 +1,12 @@
 /* =============== PRESENTATION SETTINGS =============== */
+#header.content{
+    background-color: transparent;
+}
+
+#header.fixed-menu{
+    background-color: var(--secondary-color);
+}
+
 .presentation.content{
     padding-block: 0;
 }

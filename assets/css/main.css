@@ -135,7 +135,7 @@ img{
 #header.content{
     position: fixed;
     padding-block: 0;
-    background-color: transparent;
+    background-color: var(--primary-color);
 
     width: 100vw;
     transition: 300ms;
