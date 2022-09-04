@@ -127,6 +127,21 @@ img{
     max-width: 100%;
 }
 
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+    width: 1rem;
+    background-color: #a1a6af;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #808793;
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #71757e;
+}
+
 /* =============== HEADER SETTINGS =============== */
 .menu-mobile,
 .burger{
