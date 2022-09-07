@@ -61,16 +61,22 @@ h2{
 }
 
 h3{
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 130%;
 
     margin-bottom: 6.2rem;
 }
 
-h4{  
+
+h4,
+h5{  
     font-size: 1.8rem;
     line-height: 140%;
     color: var(--secondary-color);
+}
+
+h5{
+    font-size: 1.6rem;
 }
 
 .content{
@@ -125,6 +131,80 @@ h4{
 
 img{
     max-width: 100%;
+}
+
+/*=============== PUBLIC PAGES ===============*/
+.container-information{
+    text-align: center;
+    margin-block: 4.5rem 5rem;
+}
+
+.container-information > h5{
+    opacity: .7;
+}
+
+.container-information > h3{
+    margin-block: 1rem 1.2rem;
+}
+
+.container-alternative{
+    display: flex;
+    place-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.container-alternative > a{
+    color: var(--secondary-color);
+}
+
+/*=============== PUBLIC PAGES CHOOSE ===============*/
+.identify-container_choose{
+    display: flex;
+    place-content: center;
+    gap: 2.4rem;
+
+    position: relative;
+    margin-inline: auto;
+}
+
+.layerdown{
+    z-index: -1;
+}
+
+.identify-choose_people{
+    position: relative;
+}
+
+.identify-choose_people > img{
+    filter: brightness(0.5);
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    transition: 300ms;
+}
+
+.identify-choose_people:hover img{
+    filter: brightness(0.8);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    transform: scale(1.005);
+}
+
+.identify-choose_people > h4{
+    position: absolute;
+
+    top: 40%;
+    transform: translateY(-50%);
+
+    left: 50%;
+    transform: translateX(-50%);
+    
+    color: #fff;
+    text-align: center;
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -238,14 +318,16 @@ img{
 
 .header-container .btn.menu-active-btn{
     background-color: var(--primary-color);
+    filter: brightness(1.1);
 }
 
 .fixed-menu .btn.menu-active-btn{
     background-color: var(--secondary-color);
+    filter: brightness(1.2);
 }
 
 /* =============== FOOTER SETTINGS =============== */
-#footer{
+.footer{
     background-color: var(--footer-color);
 }
 
@@ -373,6 +455,7 @@ img{
         width: 50vw;
         height: 100vh;
 
+        z-index: 2;
         padding: 12rem 2.5rem 0 0;
         
         display: flex;
@@ -405,9 +488,39 @@ img{
 
 }
 
+@media (max-width: 600px) {
+    .identify-choose_people > h4{
+        top: 30%;
+        
+        font-size: 1.6rem;
+    }
+} 
+
 @media (max-width: 482px){
     .menu-mobile{
         width: 70vw;
+    }
+
+    .identify-container_choose{
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .identify-choose_people{
+        position: relative;
+    }
+
+    .identify-choose_people > h4{
+        top: 40%;
+
+        font-size: 1.8rem;
+    }
+    
+    .container-alternative{
+        flex-direction: column;
+        gap: .5rem;
+
+        text-align: center;
     }
 
     .footer-container-group{
@@ -444,6 +557,12 @@ img{
 @media (max-width: 320px){
     .menu-mobile{
         width: 90vw;
+    }
+
+    .identify-choose_people > h4{
+        top: 32%;
+        
+        font-size: 1.6rem;
     }
 
     .footer-end_item{

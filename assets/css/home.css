@@ -50,7 +50,6 @@
 }
 
 .optionshelp-container > h3{
-    font-size: 2rem;
     color: var(--paragraph-color);
     margin-bottom: 5rem;
 }
@@ -255,10 +254,6 @@
     .optionshelp-container_group{
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .optionshelp-container h3{
-        font-size: 2rem;
     }
 
     .about-container > img{
