@@ -147,6 +147,33 @@ img{
     margin-block: 1rem 1.2rem;
 }
 
+.container-information_options{
+    display: flex;
+    place-content: center;
+    gap: 1.8rem;
+
+    margin-top: 3.5rem;
+}
+
+.container-option_active{
+    color: var(--secondary-color);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-option_active::after{
+    content: '';
+    display: block;
+    background-color: var(--secondary-color);
+
+    width: 100%;
+    height: .1rem;
+    margin-top: -.1rem;
+}
+
 .container-alternative{
     display: flex;
     place-content: center;
@@ -175,11 +202,11 @@ img{
     z-index: -1;
 }
 
-.identify-choose_people{
+.identify-choose_item{
     position: relative;
 }
 
-.identify-choose_people > img{
+.identify-choose_item > img{
     filter: brightness(0.5);
     border-radius: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -187,14 +214,14 @@ img{
     transition: 300ms;
 }
 
-.identify-choose_people:hover img{
+.identify-choose_item:hover img{
     filter: brightness(0.8);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
     transform: scale(1.005);
 }
 
-.identify-choose_people > h4{
+.identify-choose_item > h4{
     position: absolute;
 
     top: 40%;
@@ -489,7 +516,7 @@ img{
 }
 
 @media (max-width: 600px) {
-    .identify-choose_people > h4{
+    .identify-choose_item > h4{
         top: 30%;
         
         font-size: 1.6rem;
@@ -506,11 +533,11 @@ img{
         place-items: center;
     }
 
-    .identify-choose_people{
+    .identify-choose_item{
         position: relative;
     }
 
-    .identify-choose_people > h4{
+    .identify-choose_item > h4{
         top: 40%;
 
         font-size: 1.8rem;
@@ -559,7 +586,7 @@ img{
         width: 90vw;
     }
 
-    .identify-choose_people > h4{
+    .identify-choose_item > h4{
         top: 32%;
         
         font-size: 1.6rem;

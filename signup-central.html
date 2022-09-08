@@ -16,7 +16,8 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/hamburguer.css">
-    <link rel="stylesheet" href="./assets/css/main.css">   
+    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="./assets/css/form.css"> 
 </head>
 
 <body class="choose"> <!-- alterar para saber a página -->
@@ -68,21 +69,55 @@
         <section class="identify content">
             <div class="identify-container wrapper container-main_content">
                 <div class="identify-container_information container-information">
-                    <h5>IDENTIFICAR</h5>
-                    <h3>Escolha como deseja prosseguir</h3>
-                    <p>Cadastre-se como uma instituição, ou como uma pessoa.</p>
+                    <h5>CADASTRAR</h5>
+                    <h3>Insira os dados para criar uma conta</h3>
+                    <p>Preencha todos os campos para que seja criada uma conta para você.</p>
+
+                    <div class="identify-information_options container-information_options">
+                        <a href="./signup-people.html">Pessoa</a>
+                        <a href="./signup-central.html" class="container-option_active">Organização</a>
+                    </div>
                 </div>
 
-                <div class="identify-container_choose">
-                    <a href="./signup-people.html" class="identify-choose_item">
-                        <img src="./assets/img/choose-people-dog.png" alt="Imagem de fundo em um card de uma mulher cuidando de um cachorro">
-                        <h4>Continuar como pessoa física</h4>
-                    </a>
+                <div class="identify-container_form container-form">
+                    <form class="form" action="" method="post">
+                        <div class="form-instruction">
+                            <p>Preenchimento obrigatório</p><span>*</span>
+                        </div>
 
-                    <a href="./signup-central.html" class="identify-choose_item">
-                        <img src="./assets/img/choose-central-dog.png" alt="Imagem de fundo em um card de uma mulher cuidando de um cachorro">
-                        <h4>Continuar como instituição</h4>
-                    </a>
+                        <div class="form-dision">
+                            <input class="form-dision_inputfull" type="text" placeholder="Nome da organização *" name="name" required>
+
+                            <div class="form-dision_half">
+                                <input class="form-dision_inputfull" type="text" placeholder="CEP *" name="cep" required>
+                                <input class="form-dision_inputfull" type="text" placeholder="Bairro *" name="district" required>
+                            </div>
+
+                            <div class="form-dision_half">
+                                <input class="form-dision_inputfull" type="text" placeholder="Rua *" name="road" required>
+                                <input class="form-dision_inputfull" type="text" placeholder="Número *" name="number" required>
+                            </div>
+
+                            <div class="form-dision_half">
+                                <input class="form-dision_inputfull" type="text" placeholder="Estado *" name="state" required>
+                                <input class="form-dision_inputfull" type="text" placeholder="Cidade *" name="city" required>
+                            </div>
+
+                            <input class="form-dision_inputfull" type="text" placeholder="Horário de funcionamento *" name="time" required>
+                            <textarea class="form-dision_inputfull form-dision_textarea" cols="30" rows="10" placeholder="Descrição *" name="description" required></textarea>
+                            <input class="form-dision_inputfull" type="text" placeholder="Telefone celular *" name="cell" required>
+                            <input class="form-dision_inputfull" type="text" placeholder="Telefone fixo" name="landline">
+                            <input class="form-dision_inputfull" type="text" placeholder="Site" name="website">
+                        </div>
+
+                        <div class="form-dision">
+                            <input class="form-dision_inputfull" type="email" placeholder="Email *" name="email" required>
+                            <input class="form-dision_inputfull" type="password" placeholder="Senha *" name="password" required>
+                            <input class="form-dision_inputfull" type="password" placeholder="Confirmar senha *" name="confirmedPassword" required>
+                        </div>
+    
+                        <button class="btn">Cadastrar</button>
+                    </form>
                 </div>
 
                 <div class="identify-container_alternative container-alternative">

@@ -37,18 +37,23 @@ const menuMobile = document.querySelector('.menu-mobile')
 const containerWelcome = document.querySelector('.presentation-container_welcome')
 const containerMain = document.querySelector('.container-main_content')
 const containerChoose = document.querySelector('.identify-container_choose')
+const form = document.querySelector('.form')
 
 burger.addEventListener('click', () => openMobileMenu(burger))
 
 function openMobileMenu(burger){
 
     // Remove conjunto de estilos que o scroll reveal insere
-    if(containerWelcome){
+    if(containerWelcome) {
         containerWelcome.setAttribute('style', '')
     }
 
     if(containerMain) {
         containerMain.setAttribute('style', '')
+    }
+
+    if(form) {
+        form.classList.toggle('layerdown')
     }
 
     // Coloca o conteúdo uma camada abaixo do menu
